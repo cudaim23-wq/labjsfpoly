@@ -138,11 +138,24 @@ Kiểm tra chạy thử bản build qua máy chủ tĩnh: log máy chủ cho th�
 
 ## 6. Deploy
 
-Cách deploy: Netlify Drop. Vào https://app.netlify.com/drop, đăng nhập, kéo thả thư mục `dist/` vào trang.
+Cách deploy: GitHub Pages. Đẩy code (gồm cả thư mục `dist/` đã build) lên repo https://github.com/cudaim23-wq/labjsfpoly, rồi bật GitHub Pages cho nhánh `main`:
 
-Link truy cập: **(dán link Netlify vào đây)**
+```
+gh repo create labjsfpoly --public --source . --remote origin --push
+gh api -X POST repos/cudaim23-wq/labjsfpoly/pages -f "source[branch]=main" -f "source[path]=/"
+```
 
-Ảnh trang đang chạy trên mạng: **(chụp màn hình trang trên link, lưu vào `screenshots/deploy.png`)**
+Kiểm tra sau khi GitHub build xong:
+
+```
+status=built
+https://cudaim23-wq.github.io/labjsfpoly/lab8/dist/index.html -> HTTP 200
+https://cudaim23-wq.github.io/labjsfpoly/lab8/dist/bundle.js  -> HTTP 200, 3815 bytes
+```
+
+Link truy cập: **https://cudaim23-wq.github.io/labjsfpoly/lab8/dist/**
+
+Ảnh trang đang chạy trên link (đã bấm "Xem biểu đồ"):
 
 ![Trang đã deploy](screenshots/deploy.png)
 
