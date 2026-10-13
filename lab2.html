@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="ten" placeholder="Tên khoản" />
+    <input id="tien" type="number" placeholder="Số tiền" />
+    <select id="loai">
+        <option value="thu">Thu</option>
+        <option value="chi">Chi</option>
+    </select>
+    <button id="them">Thêm</button>
+    <ul id="ds"></ul>
+    <p>Số dư: <span id="soDu">0</span></p>
+</body>
+<script>
+    //người dùng nhập thông tin vào các ô input
+    const ten = document.getElementById("ten");
+    const tien = document.getElementById("tien");
+    const loai = document.getElementById("loai");
+    const them = document.getElementById("them");
+    const ds = document.getElementById("ds");
+    const soDu = document.getElementById("soDu");
+    let soDuHienTai = 0;
+
+    //người dùng nhấn nút thêm
+    them.addEventListener("click", function() {
+        //lấy thông tin từ các ô input
+        const tenGiaoDich = ten.value.trim();
+        const soTien = Number(tien.value);
+        const loaiGiaoDich = loai.value;
+
+        if (!tenGiaoDich || !(soTien > 0)) {
+            return;
+        }
+
+        //tạo mới một phần tử li
+        const li = document.createElement("li");
+
+        //phân biệt thu và chi
+        if (loaiGiaoDich === "thu") {
+            li.textContent = tenGiaoDich + ": +" + soTien;
+            soDuHienTai += soTien;
+        } else {
+            li.textContent = tenGiaoDich + ": -" + soTien;
+            soDuHienTai -= soTien;
+        }
+
+        //thêm phần tử li vào danh sách
+        ds.appendChild(li);
+        //cập nhật số dư
+        soDu.textContent = soDuHienTai;
+
+        ten.value = "";
+        tien.value = "";
+    });
+</script>
+</html>

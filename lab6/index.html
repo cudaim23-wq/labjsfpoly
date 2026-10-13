@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 6 - Danh bạ người dùng</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 16px;
+            color: #222;
+        }
+        .thanh-cong-cu {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+        #oTimKiem {
+            flex: 1;
+            padding: 8px 12px;
+            font-size: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        #nutTaiLai {
+            padding: 8px 16px;
+            font-size: 15px;
+            border: none;
+            border-radius: 6px;
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+        }
+        #nutTaiLai:disabled {
+            background: #93a7d6;
+            cursor: not-allowed;
+        }
+        #trangThai {
+            margin: 12px 0;
+            font-style: italic;
+        }
+        #trangThai.loi {
+            color: #b91c1c;
+            font-style: normal;
+            background: #fee2e2;
+            padding: 10px 12px;
+            border-radius: 6px;
+        }
+        #danhSach {
+            list-style: none;
+            padding: 0;
+        }
+        #danhSach li {
+            display: grid;
+            grid-template-columns: 1.2fr 1.5fr 1fr;
+            gap: 10px;
+            padding: 10px 12px;
+            border-bottom: 1px solid #eee;
+        }
+        #danhSach li:hover {
+            background: #f5f7fb;
+        }
+        .ten {
+            font-weight: bold;
+        }
+        .email {
+            color: #2563eb;
+        }
+        .thanh-pho {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Danh bạ người dùng</h1>
+
+    <div class="thanh-cong-cu">
+        <input type="text" id="oTimKiem" placeholder="Tìm theo tên...">
+        <button id="nutTaiLai">Tải lại</button>
+    </div>
+
+    <p id="trangThai"></p>
+    <ul id="danhSach"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
