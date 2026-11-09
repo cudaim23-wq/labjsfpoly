@@ -1,24 +1,15 @@
-<script setup>
-import Bai2 from './Labs/Lab-1/Bai2.vue'
-import Bai3 from './Labs/Lab-1/Bai3.vue'
-import Bai4 from './Labs/Lab-1/Bai4.vue'
-</script>
-
 <template>
-  <div class="container py-4">
-    <section class="mb-5">
-      <h5 class="text-muted">Bài 2</h5>
-      <Bai2 />
-    </section>
-
-    <section class="mb-5">
-      <h5 class="text-muted">Bài 3</h5>
-      <Bai3 />
-    </section>
-
-    <section>
-      <h5 class="text-muted">Bài 4</h5>
-      <Bai4 />
-    </section>
-  </div>
+  <nav class="navbar navbar-expand navbar-dark bg-dark mb-4">
+    <div class="container">
+      <router-link to="/" class="navbar-brand">Vue Labs</router-link>
+      <ul class="navbar-nav flex-wrap">
+        <li v-for="n in 7" :key="n" class="nav-item">
+          <router-link :to="`/lab-${n}`" class="nav-link" active-class="active">Lab {{ n }}</router-link>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <main class="container pb-5">
+    <router-view />
+  </main>
 </template>

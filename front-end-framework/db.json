@@ -1,0 +1,103 @@
+{
+  "posts": [
+    {
+      "userId": 1,
+      "id": 1,
+      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+      "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    },
+    {
+      "userId": 1,
+      "id": 2,
+      "title": "qui est esse",
+      "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+    },
+    {
+      "userId": 1,
+      "id": 3,
+      "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+      "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+    },
+    {
+      "userId": 1,
+      "id": 4,
+      "title": "eum et est occaecati",
+      "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Leanne Graham",
+      "username": "Bret",
+      "email": "Sincere@april.biz",
+      "address": { "street": "Kulas Light", "city": "Gwenborough" },
+      "phone": "1-770-736-8031 x56442",
+      "website": "hildegard.org"
+    },
+    {
+      "id": 2,
+      "name": "Ervin Howell",
+      "username": "Antonette",
+      "email": "Shanna@melissa.tv",
+      "address": { "street": "Victor Plains", "city": "Wisokyburgh" },
+      "phone": "010-692-6593 x09125",
+      "website": "anastasia.net"
+    },
+    {
+      "id": 3,
+      "name": "Clementine Bauch",
+      "username": "Samantha",
+      "email": "Nathan@yesenia.net",
+      "address": { "street": "Douglas Extension", "city": "McKenziehaven" },
+      "phone": "1-463-123-4447",
+      "website": "ramiro.info"
+    },
+    {
+      "id": 4,
+      "name": "Patricia Lebsack",
+      "username": "Karianne",
+      "email": "Julianne.OConner@kory.org",
+      "address": { "street": "Hoeger Mall", "city": "South Elvis" },
+      "phone": "493-170-9623 x156",
+      "website": "kale.biz"
+    },
+    {
+      "id": 5,
+      "name": "Admin",
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "password": "$2a$10$4iZFluusqwFowUGEs4s4MezFcTQh7lVqUOD7IwTSkqGTmBUAr4D5u",
+      "address": { "street": "1 Trịnh Văn Bô", "city": "Hà Nội" }
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Laptop",
+      "price": 15000000,
+      "description": "Laptop thế hệ mới, màn hình 14 inch",
+      "category": "Electronics",
+      "quantity": 5,
+      "imageUrl": "https://picsum.photos/id/0/400/250"
+    },
+    {
+      "id": 2,
+      "name": "Phone",
+      "price": 8000000,
+      "description": "Điện thoại thông minh, camera 50MP",
+      "category": "Electronics",
+      "quantity": 12,
+      "imageUrl": "https://picsum.photos/id/160/400/250"
+    },
+    {
+      "id": 3,
+      "name": "Headphone",
+      "price": 2000000,
+      "description": "Tai nghe chống ồn chất lượng cao",
+      "category": "Accessories",
+      "quantity": 0,
+      "imageUrl": "https://picsum.photos/id/180/400/250"
+    }
+  ]
+}
